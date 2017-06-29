@@ -1,26 +1,52 @@
 en:
-  title_info: "Ruby on Rails Tutorial Sample App"
-  content: "This is the home page for the %{rort} sample application."
-  link: "Ruby on Rails Tutorial"
-  link_help: "Rails Tutorial help section"
-  link_book: "Ruby on Rails Tutorial"
-  link_screencast: screencast series
-  link_ror: Ruby on Rails
-  book: book
-
+  helpers:
+    application_helper:
+      title: "Ruby on Rails Tutorial Sample App"
+  layouts:
+    application:
+      title: "Ruby on Rails Tutorial Sample App"
+    header:
+      sample: "sample app"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+    footer:
+      content: "The %{rort} by %{mh}"
+      rort: "Ruby on Rails Tutorial"
+      mh: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+      news: "News"
   static_pages:
-   home:
-    home: Home
-    sample_app: "Sample App"
-    content: "This is the home page for the %{rort} sample application."
-
-   help:
-    help: "Help"
-    content: "Get help on the Ruby on Rails Tutorial at the %{help}.
-      To get help on this sample app, see the <em>%{book}</em>."
-
-   about:
-    about: "About"
-    content: "The <em>%{link_book}</em> is a %{book} and
-      %{link_screencast} to teach web development with %{link_ror}.
-      This is the sample application for the tutorial."
+    home:
+      home: "Home"
+      sample: "Welcome to the Sample App"
+      content: "This is the home page for the
+        %{rort} sample application."
+      rort: "Ruby on Rails Tutorial"
+      signup: "Sign up now!"
+      railslogo: "Rails logo"
+    about:
+      about: "About"
+      content: "The %{rort} is a %{book} and %{screencast}
+        to teach web development with %{ror}.
+        This is the sample application for the tutorial."
+      rort: "Ruby on Rails Tutorial"
+      book: "book"
+      screencast: "screencast"
+      ror: "Ruby on Rails"
+    help:
+      help: "Help"
+      content: "Get help on the Ruby on Rails Tutorial at the %{rorhs}
+        To get help on this sample app, see the %{rort} book."
+      rorhs: "Rails Tutorial help section"
+      rort: "Ruby on Rails Tutorial"
+    contact:
+      contact: "Contact"
+      content: "Contact the Ruby on Rails Tutorial
+        about the sample app at the %{cp}."
+      cp: "Contact page"
+  users:
+    new:
+      signup: "Sign up"
+      content: "This will be a sign up page for new users."
