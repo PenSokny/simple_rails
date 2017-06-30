@@ -3,15 +3,14 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: {maximum: Settings.name.maximum}
   validates :email, presence: true, length: {maximum: Settings.email.maximum},
-    format: {with: VALID_EMAIL_REGEX},
-    uniqueness: {case_sensitive: false}
-  validates :password, presence: true,
-    length: {minimum: Settings.password.minimum}
-
+    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+  validates :password, length: {minimum: Settings.password.minimum}
+  validates :password_confirmation, presence: true,
+    length: {minimum: Settings.password.minimum}, on: [:create]
   has_secure_password
 
   before_save :email_downcase
-  
+
   private
   def email_downcase
     email.downcase!
