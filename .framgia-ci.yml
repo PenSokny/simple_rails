@@ -13,7 +13,6 @@ test:
   scss-lint:
     command: scss-lint --require=scss_lint_reporter_checkstyle --format=Checkstyle --out=.framgia-ci-reports/scss-lint.xml app/assets/stylesheets/
   eslint:
-    command: /bin/bash -l -c eslint --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/
-    ignore: true
+    command: /bin/bash -l -c rake eslint:run_all --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/ --ignore-path path::app/assets/javascripts/application.js
   rails_best_practices:
     command: /bin/bash -l -c rails_best_practices -e "db/schema.rb,db/migrate,vendor" --format html --output-file .framgia-ci-reports/rails_best_practices.html app/
