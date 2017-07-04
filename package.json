@@ -1,0 +1,8 @@
+{
+  "name": "railsProject",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.1.1"
+  }
+}
