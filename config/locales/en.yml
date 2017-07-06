@@ -63,3 +63,11 @@ en:
     error_messages:
       contains: "The form contains %{count_errors}"
       error: "error"
+
+  sessions:
+    new:
+      login: "Login"
+      signup: "Sign up now!"
+      new: "New user?"
+    create:
+      invalid: "Invalid email/password combination"
